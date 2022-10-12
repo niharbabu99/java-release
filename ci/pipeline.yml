@@ -67,7 +67,7 @@ jobs:
       rebase: true
       repository: java-release-out
 
-- name: build-11
+- name: build-17
   serial: true
   plan:
   - in_parallel:
@@ -79,7 +79,7 @@ jobs:
   - task: get_release
     file: java-release/ci/get_release.yml
     params:
-      JAVA_VERSION: 11
+      JAVA_VERSION: 17
   - task: build
     privileged: true
     file: java-release/ci/build.yml
