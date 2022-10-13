@@ -2,20 +2,22 @@ resources:
 - name: java-release
   type: git
   source:
-    uri: git@github.com:bosh-packages/java-release
-    branch: master
+    uri: git@github.com:niharbabu99/java-release.git
+    branch: SAAS-24870
     private_key: ((github_deployment_key))
+    private_key_passphrase: java-releases
 
 - name: stemcell
   type: bosh-io-stemcell
   source:
-    name: bosh-warden-boshlite-ubuntu-xenial-go_agent
+    name: bosh-warden-boshlite-ubuntu-bionic-go_agent
 
 - name: daily
   type: time
   source:
-    start: 3:00 -0700
-    stop: 4:30 -0700
+    start: 5:30 PM
+    stop: 6:00 PM
+    location: Asia/Calcutta
     days: [Monday, Tuesday, Wednesday, Thursday, Friday]
 
 jobs:
